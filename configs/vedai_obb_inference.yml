@@ -1,0 +1,17 @@
+task: detection
+num_classes: 11
+angle_factor: 3.141592653589793
+remap_mscoco_category: false
+use_focal_loss: true
+eval_spatial_size: [1024, 1024]
+text_cache_file: text_embedding/vedai_text_cache.pth
+model: OVDEIM_MG
+postprocessor: OBBPostProcessor
+OBBPostProcessor:
+  num_top_queries: 300
+  score_threshold: 0.001
+OVDEIM_MG:
+  yaml_path: configs/models/tgfa-n-ov-obb.yaml
+  img_dim: 128
+  text_dim: 768
+  text_adapter_layers: 1

@@ -1,0 +1,12 @@
+einops
+calflops
+matplotlib
+numpy
+opencv-python-headless
+Pillow
+pycocotools
+pycocoeval
+prettytable
+PyYAML
+scipy
+timm==1.0.27

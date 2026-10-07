@@ -1,0 +1,16 @@
+task: detection
+num_classes: 6
+remap_mscoco_category: false
+use_focal_loss: true
+eval_spatial_size: [640, 640]
+text_cache_file: text_embedding/m3fd_text_cache.pth
+model: OVDEIM_MG
+postprocessor: PostProcessor
+PostProcessor:
+  num_top_queries: 300
+  score_threshold: 0.001
+OVDEIM_MG:
+  yaml_path: configs/models/tgfa-n-ov.yaml
+  img_dim: 128
+  text_dim: 768
+  text_adapter_layers: 1
